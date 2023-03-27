@@ -1,20 +1,15 @@
-const Card = () => {
+const Card = ({ image, alt, url, title, description }) => {
   return (
-    <div class='card' style={{ width: '18rem' }}>
-      <img
-        src='https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1388716938i/8051458.jpg'
-        class='card-img-top'
-        alt='book cover'
-      />
-      <div class='card-body'>
-        <h5 class='card-title'>Card title</h5>
-        <p class='card-text'>
-          Some quick example text to build on the card title and make up the
-          bulk of the card's content.
-        </p>
-        <a href='#' class='btn btn-primary'>
-          Go somewhere
-        </a>
+    <div className='col mb-4'>
+      <div className='card text-start' style={{ width: '18rem' }}>
+        <img src={image} className='card-img-top' alt={alt} />
+        <div className='card-body'>
+          <h5 className='card-title'>{title}</h5>
+          <p className='card-text'>{description}</p>
+          <a href={url} className='btn btn-primary'>
+            More Info
+          </a>
+        </div>
       </div>
     </div>
   );
