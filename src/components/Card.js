@@ -1,7 +1,11 @@
-const Card = ({ image, alt, url, title, description }) => {
+const Card = ({ image, alt, url, title, description, onClick }) => {
   return (
     <div className='col mb-4'>
-      <div className='card text-start' style={{ width: '18rem' }}>
+      <div
+        className='card text-start'
+        style={{ width: '18rem' }}
+        onClick={onClick}
+      >
         <img src={image} className='card-img-top' alt={alt} />
         <div className='card-body'>
           <h5 className='card-title'>{title}</h5>
